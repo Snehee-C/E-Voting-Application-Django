@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Voting Home</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+            transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out; 
+        }
+
+        nav li:hover {
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+        }
+        p {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to E-Voting System</h1>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'notice' %}">Important Notice</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'result' %}">Results</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>About Us</h2>
+        <p>
+            Welcome to the E-Voting System website. We provide a secure and convenient platform for electronic voting in various elections and polls.
+        </p>
+        <p>
+            Our mission is to ensure a fair and transparent voting process while making it easy for citizens to participate in the democratic process from anywhere, at any time.
+        </p>
+        <h2>Get Started</h2>
+        <p>
+            To cast your vote in an upcoming election or learn more about our platform, click the button below:
+        </p>
+        <a href="{% url 'login' %}" class="cta-button">Start Voting</a>
+    </div>
+</body>
+</html>

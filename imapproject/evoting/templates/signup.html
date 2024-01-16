@@ -1,0 +1,155 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Voting Signup</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 300px;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            /* Add hover effect */
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #000000;
+            font-weight: bold; 
+        }
+        nav li:hover {
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: left;
+            margin-bottom: 100px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+            display: block;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-Voting Signup</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'notice' %}">Important Notice</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'result' %}">Results</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <form action="" method="post">
+            {% csrf_token %} 
+            <h3>Signup Here</h3>
+
+            <label for="username">Username (10 digit voter-id number)</label>
+            <input type="text" placeholder="Username" name="username" id="username">
+    
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" name="email" id="email">
+    
+            <label for="password1">Password (1 digit, uppercase, lowercase and symbol)</label>
+            <input type="password" placeholder="Password" id="password1" name="password1">
+    
+    
+            <label for="password2">Confirm Password</label>
+            <input type="password" placeholder="Confirm Password" id="password2" name="password2">
+            <button type="submit">Signup</button>
+            
+        </form>
+    </div>
+
+</body>
+</html>
